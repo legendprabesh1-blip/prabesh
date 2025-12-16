@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="center">
+
+<div class="email">
+  <h3>To: My Love 💌</h3>
+  <p>
+    Dear <b id="user"></b>,<br><br>
+    I just want to say from my heart — <b>I LOVE YOU ❤️</b><br><br>
+    Forever yours 🌹
+  </p>
+  <button onclick="next()">Next</button>
+</div>
+
+<script>
+document.getElementById("user").innerText = localStorage.getItem("user") || "You";
+function next(){ window.location.href = "love.html"; }
+</script>
+
+</body>
+</html>
