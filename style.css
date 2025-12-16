@@ -1,0 +1,29 @@
+body{margin:0;font-family:Arial;overflow:hidden;}
+.center{display:flex;flex-direction:column;justify-content:center;align-items:center;height:100vh;text-align:center;}
+.box,input,button{padding:10px;margin:10px;border-radius:10px;border:none;}
+button{background:hotpink;color:rgb(247, 12, 71);font-size:16px;cursor:pointer;}
+button:active{transform:scale(0.95);}
+
+.email,.box{background:rgb(247, 110, 224);padding:20px;border-radius:15px;max-width:90%;}
+
+.rotate-btn{animation: spin 2s linear infinite;font-size:24px;}
+@keyframes spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+
+.night{background: radial-gradient(circle at top, #2b1055, #000);overflow:hidden;color:white;}
+.heart{position:relative;width:140px;height:140px;background:#ff2d55;transform: rotate(-45deg);margin:auto;box-shadow:0 0 30px rgba(255,45,85,0.7);animation:beat 1.5s infinite;}
+.heart::before,.heart::after{content:"";position:absolute;width:140px;height:140px;background:#ff2d55;border-radius:50%;}
+.heart::before{top:-70px;left:0;} .heart::after{left:70px;top:0;}
+@keyframes beat{0%{transform: rotate(-45deg) scale(1);}30%{transform: rotate(-45deg) scale(1.08);}50%{transform: rotate(-45deg) scale(1);}70%{transform: rotate(-45deg) scale(1.1);}100%{transform: rotate(-45deg) scale(1);}}
+
+.heart-box{position: relative;width: 220px;height:200px;animation: zoomIn 2s ease-out forwards;margin-bottom:20px;}
+.heart-left, .heart-right{position:absolute;width:110px;height:180px;background:#ff4d6d;border-radius:110px 110px 0 0;top:20px;box-shadow:0 0 30px rgba(255,77,109,0.8);}
+.heart-left{left:0;transform-origin:right bottom;animation:openLeft 2s ease-in-out 2.5s forwards;}
+.heart-right{right:0;transform-origin:left bottom;animation:openRight 2s ease-in-out 2.5s forwards;}
+.message{position:absolute;top:80px;width:100%;text-align:center;color:#ff3de5;font-size:24px;opacity:0;animation:showText 2s ease-in 4.5s forwards;}
+@keyframes zoomIn{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+@keyframes openLeft{to{transform:rotate(-45deg);}} @keyframes openRight{to{transform:rotate(45deg);}} @keyframes showText{to{opacity:1;}}
+
+.container{background: linear-gradient(to top, #ff758c, #ff7eb3);height:100vh;width:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;}
+.text{margin-top:25px;color:white;font-size:22px;animation:fade 3s ease-in;}
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+
