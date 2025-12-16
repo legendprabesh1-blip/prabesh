@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cute Love Page</title>
+
+<!-- Cute Font -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  font-family:'Pacifico', cursive;
+}
+
+/* Button Page */
+#startPage{
+  text-align:center;
+}
+
+#startPage button{
+  padding:15px 35px;
+  font-size:22px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#startPage button:hover{
+  transform:scale(1.1);
+}
+
+/* Love Page */
+#lovePage{
+  display:none;
+}
+
+.container{
+  background:rgba(255,255,255,0.9);
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  width:90%;
+  max-width:420px;
+}
+
+.container h1{
+  font-size:28px;
+  color:#ff4d6d;
+  margin-bottom:20px;
+}
+
+.image-box{
+  width:100%;
+  height:250px;
+  border:3px dashed #ff4d6d;
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#ff4d6d;
+  font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- First Page -->
+<div id="startPage">
+  <button onclick="openLove()">Click for Love 💖</button>
+</div>
+
+<!-- Second Page -->
+<div id="lovePage">
+  <div class="container">
+    <h1>we will do in all position okie bby 💕</h1>
+
+    <div class="image-box">
+     we will do in all position okie bby 💕  ❤️  
+      <br> <img src="bestof best.jpg" alt="box-shadow">
+    </div>
+  </div>
+</div>
+
+<script>
+function openLove(){
+  document.getElementById("startPage").style.display="none";
+  document.getElementById("lovePage").style.display="block";
+  
+}
+</script>
+
+</body>
+</html>
